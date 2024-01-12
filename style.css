@@ -1,0 +1,88 @@
+:root {
+    --bgcolor: #2e3440;
+    --fgcolor: #8fbcbb;
+    --prompt: #5e81ac;
+    --asciiart_start: #5e81ac;
+    --asciiart_end: #8fbcbb;
+}
+
+p {
+    margin: 0px;
+}
+
+span[name="cursor"] {
+	font-size: 2ch;
+}
+span[name="cursor"]:after {
+	content:"█";
+	opacity: 0;
+	animation: cursor 1s infinite;
+    font-size: 10;
+}
+@keyframes cursor {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+#mydiv{
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+
+.wrapper {
+    position: absolute;
+    background-color: white;
+    height: 200px;
+    width: 200px;
+}
+
+.header {
+    position: relative;
+    height: 50px;
+    width: 200px;
+    background-color: red;
+}
+
+p[name="shell"] {
+    color: var(--prompt);
+}
+
+p[name="asciiart"] {
+    background: -webkit-linear-gradient(var(--asciiart_start), var(--asciiart_end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+label[name="prompt"] {
+    color: var(--prompt);
+    font-weight: bold;
+}
+
+
+input {
+    all: unset;
+    color: var(--fgcolor);
+    caret-color:transparent;
+    margin:0px;
+    white-space:nowrap;
+}
+
+* {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--fgcolor);
+    background-color: var(--bgcolor);
+}
