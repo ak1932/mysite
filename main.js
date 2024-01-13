@@ -36,19 +36,26 @@ inputElem.addEventListener('change', () => {
     switch (firstWord) {
         case "help":
             output = 
-                "about => Some info about me\n" +
-                "theme => Coz preety :)\n" +
-                "server => Access to my servers\n"+
-                "projects => Link to my coding projects\n"+
-                "contact => If you feel deep in your heart the need to contact me\n"+
-                "name => Let me know you were here\n"+
-                "social => My social media\n"+
-                "help => Guess what this does\n"+
-                "clear => Clear output"
+`about => Some info about me
+theme => Coz preety :)
+server => Access to my servers
+projects => Link to my coding projects
+contact => If you feel deep in your heart the need to contact me
+name => Let me know you were here
+social => My social media
+help => Guess what this does
+clear => Clear output`
             break;
 
         case "about":
-            output = "hi.\ni am aryan kadole.\ni am 19 years old.\ni laugh 😆.\ni love FOSS.\ni hate proprietary stuff.\ni love my privacy."
+            output = 
+`hi.
+i am aryan kadole.
+i am 19 years old.
+i laugh 😆.
+i love FOSS.
+i hate proprietary stuff.
+i love my privacy.`
             break;
 
         case "theme":
@@ -82,7 +89,9 @@ inputElem.addEventListener('change', () => {
                     prompt = "#d79921"
                     asciiart_start = "#d79921"
                     asciiart_end = "#cc241d"
-                    output = "Welcome to hell.\nChanged to abomination"
+                    output = 
+`Welcome to hell.
+Changed to abomination`
                     break;
                 case "everforest":
                     bgcolor = "#272e33"
@@ -126,7 +135,10 @@ inputElem.addEventListener('change', () => {
                     break;
                 default:
                     var themes=["nord", "gruvbox", "everforest", "monokai", "onedark", "catpuccin", "tokyonight", "abomination"]
-                    output = "Usage:\ntheme <themename>\nChoose from \n" + themes.join("\n")
+                    output = `Usage:
+theme <themename>
+Choose from 
+${themes.join("\n")}`
                     break;
             }
 
@@ -163,7 +175,12 @@ inputElem.addEventListener('change', () => {
                     }
                     break;
                 default:
-                    output = "Usage:\nserver <servername>\nChoose from \nnavidrome\njellyfin"
+                    output = 
+`Usage:
+server <servername>
+Choose from 
+navidrome
+jellyfin`
                     break;
             }
             break;
@@ -210,7 +227,12 @@ inputElem.addEventListener('change', () => {
             break;
 
         case "projects":
-            output = "TODO:-\n 1. Add good projects to showoff\n2. Complete the aforementioned good projects\n-----\nUp for a collab tho. 😏"
+            output = 
+`TODO:-
+1. Add good projects to showoff
+2. Complete the aforementioned good projects
+-----
+Up for a collab tho. 😏`
             break;
 
         case "social":
@@ -223,7 +245,9 @@ inputElem.addEventListener('change', () => {
             break;
 
         default:
-            output = "bash: " + firstWord + ": command not found\nTry `help` for available commands"
+            output = 
+`bash: ${firstWord}: command not found
+Try \`help\` for available commands`
             break;
     }
 
